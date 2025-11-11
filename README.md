@@ -1,6 +1,6 @@
 # TrafficMagnit Litestar microservice
 
-Мета: винести частину API, що зараз реалізована в Django DRF (`admin_panel/api/offer_walls.py`), в окремий мікросервіс на Litestar з асинхронним доступом до БД, окремим Dockerfile і проксуванням через Nginx.
+Мета: винести частину API, що зараз реалізована в Django DRF (`admin_panel/api/offer_walls.py`), в окремий мікросервіс на **Litestar** з асинхронним доступом до БД, окремим Dockerfile і проксуванням через **Nginx**.
 
 ## Стек
 
@@ -14,3 +14,12 @@
 
 > Примітка: у вимогах вказаний Granian. У Windows-середовищі можуть бути проблеми зі стартом Granian, тому для локального запуску використовується uvicorn. У Docker-оточенні можна замінити CMD на запуск Granian.
 
+---
+
+## Запуск проєкту
+
+docker compose up --build
+docker compose exec app python -m app.scripts.create_tables
+curl http://localhost/api/offer-walls
+docker compose logs -f
+docker compose down
