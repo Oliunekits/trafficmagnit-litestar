@@ -1,21 +1,19 @@
 # traffic-analytics-api
 
-Мета: винести частину API, що зараз реалізована в Django DRF (`admin_panel/api/offer_walls.py`), в окремий мікросервіс на **Litestar** з асинхронним доступом до БД, окремим Dockerfile і проксуванням через **Nginx**.
-
 **High-performance async backend for collecting and analyzing real-time traffic data**
 
-## 🚀 Features
+##  Features
 - Async processing for **parallel requests**
 - Traffic aggregation & scoring (congestion, incidents, intensity)
 - **PostgreSQL storage**
 - **Docker-based deployment**
 - Environment variable configuration
 
-## 🛠 Tech Stack
+##  Tech Stack
 - Litestar, Python 3, PostgreSQL
 - Async (asyncio/aiohttp style requests), Docker
 
-## 📦 Installation & Run
+## Installation & Run
 
 1. Install dependencies:
 - bash
